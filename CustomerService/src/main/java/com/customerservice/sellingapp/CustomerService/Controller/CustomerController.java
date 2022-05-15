@@ -22,15 +22,15 @@ public class CustomerController {
         return customerService.addCustomer(customer);
     }
 
-//    @GetMapping("/allCustomers")
-//    public List<Customer> getAllCustomers(){ return customerService.getAllCustomers();}
+    @GetMapping("/allCustomers")
+    public List<Customer> getAllCustomers(){ return customerService.getAllCustomers();}
 //
 //    @PutMapping("/updateDriver")
 //    public Customer updateDriver(@RequestBody Customer customer) { return CustomerService.updateCustomer(customer);}
 //
-//    @GetMapping("/getCustomerById/{id}")
-//    public Optional<Customer> getCustomerById(@PathVariable String id){ return customerService.getCustomerById(id);}
-//
+    @GetMapping("/getCustomerById/{id}")
+    public Optional<Customer> getCustomerById(@PathVariable Integer id){ return customerService.getCustomerById(id);}
+
 //    @DeleteMapping("/deleteCustomerById/{id}")
 //    public boolean deleteCustomerById(@PathVariable String id){ return  customerService.deleteCustomer(id);}
 }

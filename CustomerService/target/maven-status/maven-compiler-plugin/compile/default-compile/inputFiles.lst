@@ -1,6 +1,6 @@
-/Users/savvy/Documents/CTSE/CustomerService/src/main/java/com/customerservice/sellingapp/CustomerService/Model/Customer.java
-/Users/savvy/Documents/CTSE/CustomerService/src/main/java/com/customerservice/sellingapp/CustomerService/Repositories/CustomerRepository.java
-/Users/savvy/Documents/CTSE/CustomerService/src/main/java/com/customerservice/sellingapp/CustomerService/Service/Impl/CustomerServiceImpl.java
-/Users/savvy/Documents/CTSE/CustomerService/src/main/java/com/customerservice/sellingapp/CustomerService/Controller/CustomerController.java
-/Users/savvy/Documents/CTSE/CustomerService/src/main/java/com/customerservice/sellingapp/CustomerService/CustomerServiceApplication.java
-/Users/savvy/Documents/CTSE/CustomerService/src/main/java/com/customerservice/sellingapp/CustomerService/Service/CustomerService.java
+/Users/savvy/Documents/GitHub/CTSE_Assignment3/CustomerService/src/main/java/com/customerservice/sellingapp/CustomerService/Service/CustomerService.java
+/Users/savvy/Documents/GitHub/CTSE_Assignment3/CustomerService/src/main/java/com/customerservice/sellingapp/CustomerService/Model/Customer.java
+/Users/savvy/Documents/GitHub/CTSE_Assignment3/CustomerService/src/main/java/com/customerservice/sellingapp/CustomerService/Service/Impl/CustomerServiceImpl.java
+/Users/savvy/Documents/GitHub/CTSE_Assignment3/CustomerService/src/main/java/com/customerservice/sellingapp/CustomerService/Repositories/CustomerRepository.java
+/Users/savvy/Documents/GitHub/CTSE_Assignment3/CustomerService/src/main/java/com/customerservice/sellingapp/CustomerService/CustomerServiceApplication.java
+/Users/savvy/Documents/GitHub/CTSE_Assignment3/CustomerService/src/main/java/com/customerservice/sellingapp/CustomerService/Controller/CustomerController.java

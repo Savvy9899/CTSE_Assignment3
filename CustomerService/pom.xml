@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.customer-service.selling-app</groupId>
 	<artifactId>CustomerService</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>CustomerService</name>
 	<description>CTSE Microservices Application</description>
 	<properties>
@@ -71,6 +71,25 @@
 					</excludes>
 				</configuration>
 			</plugin>
+
+<!--			<plugin>-->
+<!--				<groupId>com.spotify</groupId>-->
+<!--				<artifactId>dockerfile-maven-plugin</artifactId>-->
+<!--				<version>1.4.3</version>-->
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<id>default</id>-->
+<!--						<goals>-->
+<!--							<goal>build</goal>-->
+<!--							<goal>push</goal>-->
+<!--						</goals>-->
+<!--					</execution>-->
+<!--				</executions>-->
+<!--				<configuration>-->
+<!--					<repository>CtseRepository/CustomerService</repository>-->
+<!--					<tag>${project.version}</tag>-->
+<!--				</configuration>-->
+<!--			</plugin>-->
 		</plugins>
 	</build>
 
