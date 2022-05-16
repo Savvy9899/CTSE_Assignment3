@@ -15,10 +15,10 @@ spec:
         app: docker-k8s-spring-boot
     spec:
       containers:
-        - name: docker-k8s-spring-boot
+      - name: docker-k8s-spring-boot
           image: pamuditha98/spring-boot-docker
           ports:
-            - containerPort: 8082
+          - containerPort: 9089
 
 
 
