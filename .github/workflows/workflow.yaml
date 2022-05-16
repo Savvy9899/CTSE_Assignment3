@@ -23,6 +23,7 @@ jobs:
       - name: Set up JDK 8
         uses: actions/setup-java@v3
         with:
+          image: pamuditha98/spring-boot-docker
           java-version: '8'
           distribution: 'adopt'
           server-id: docker.io
@@ -30,7 +31,7 @@ jobs:
           server-password: MAVEN_PASSWORD
 
       - name: Building and Pushing Customer Service
-        run: mvn package dockerfile:push --file pom.xml
+        run: mvn package dockerfile:push --file CustomerService/pom.xml
         env:
           MAVEN_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
