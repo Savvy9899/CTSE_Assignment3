@@ -8,7 +8,7 @@ on:
     
 env:
 
-  PROJECT_ID: ${{secrets.PROJECT_ID}}
+  PROJECT_ID: ${{ secrets.PROJECT_ID }}
   GKE_CLUSTER: k8s-docker-spring-boot
   GKE_ZONE: us-central1-c
 
