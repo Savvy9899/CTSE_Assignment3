@@ -24,6 +24,11 @@ public class CustomerController {
 
     @GetMapping("/allCustomers")
     public List<Customer> getAllCustomers(){ return customerService.getAllCustomers();}
+
+    @GetMapping("/labba")
+    public String getString(){
+        return "Fucking Awesome";
+    }
 //
 //    @PutMapping("/updateDriver")
 //    public Customer updateDriver(@RequestBody Customer customer) { return CustomerService.updateCustomer(customer);}
