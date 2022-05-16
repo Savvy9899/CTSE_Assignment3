@@ -51,4 +51,4 @@ jobs:
         CLUSTER_NAME: ${{env.GKE_CLUSTER}}
         ZONE_NAME: ${{env.GKE_ZONE}}
       with:
-        args: apply -f docker-k8s-spring-boot.yaml
+        args: get pods
