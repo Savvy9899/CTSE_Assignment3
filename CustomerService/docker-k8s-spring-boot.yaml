@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker-k8s-spring-boot-deployment
+  labels:
+    app: docker-k8s-spring-boot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: docker-k8s-spring-boot
+  template:
+    metadata:
+      labels:
+        app: docker-k8s-spring-boot
+    spec:
+      containers:
+      - name: docker-k8s-spring-boot
+          image: pamuditha98/spring-boot-docker
+          ports:
+          - containerPort: 9089
+
+
+
