@@ -27,7 +27,7 @@ jobs:
         image: pamuditha98/spring-boot-docker
         tags: latest
         registry: docker.io
-        dockerfile: CustomerService/
+        dockerfile: CustomerService/Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
