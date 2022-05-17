@@ -5,32 +5,53 @@ name: SpringBoot CI/CD Pipeline
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 8
-        uses: actions/setup-java@v1
-        with:
-          java-version: '8'
-          distribution: 'adopt'
-          cache: maven
-      - name: Build with Maven
-        run: mvn clean install
+steps:
+  - uses: actions/checkout@v2
+  - name: Set up JDK 8
+    uses: actions/setup-java@v1
+    with:
+      java-version: '8'
+  - name: Build with Maven
+    run: mvn clean install
 
-      - name: Build & push Docker image
-        uses: mr-smithers-excellent/docker-build-push@v5
-        with:
-          image: pamuditha98/spring-boot-docker
-          tags: latest
-          registry: docker.io
-          dockerfile: Dockerfile
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+  - name: Build & push Docker image
+    uses: docker/login-action@v1
+    with:
+      username: ${{ secrets.DOCKER_USERNAME }}
+      password: ${{ secrets.DOCKER_PASSWORD }}
+
+# Building Docker Image and pushing it into Dockerhub
+    - name: Building Docker Image
+      run: docker build . --file Dockerfile --tag tironelorence/spring-boot-docker:1.1
+    - name: Pushing Docker Image to Docker Hub
+      run: docker push tironelorence/spring-boot-docker:1.1
+
+# Logging into Google Cloud Services - Kubernetes Engine
+    - id: "auth"
+      uses: google-github-actions/auth@v0
+      with:
+        credentials_json: ${{ secrets.GKE_SA_KEY }}
+
+    - name: Set up Cloud SDK
+
+# Setting up gCloud CLI
+    - name: Set up Cloud SDK
+      uses: google-github-actions/setup-gcloud@v0
+
+      - name: Use GCloud CLI
+        run: gcloud info
+
+# Deploying the Dockerhub image into the Kubernetes Cluster
+    - run: gcloud container clusters get-credentials ${{ env.GKE_CLUSTER }} --zone ${{ env.GKE_ZONE }}
+    - name: Deploy
+      run: kubectl apply -f deployment.yaml
+
