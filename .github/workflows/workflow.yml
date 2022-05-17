@@ -57,5 +57,3 @@ jobs:
     - name: Deploy
       run: kubectl apply -f docker-k8s-spring-boot.yaml
       
-      
-
