@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: docker-k8s-spring-boot
-          image: pamuditha98/spring-boot-docker
+          image: pamuditha98/spring-boot-docker:1.1
           ports:
           - containerPort: 9089
 
